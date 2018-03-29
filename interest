@@ -1,0 +1,14 @@
+function calculateYears(principal, interest, tax, desired) {
+    currentAmount = principal;
+    console.log(currentAmount, desired);
+    for(var currentYear = 0; currentAmount < desired; currentYear++) {
+      console.log("this is hit");
+      var currentInterest = currentAmount * interest;
+      var currentTax = currentInterest * tax;
+      currentAmount = currentAmount + (currentInterest - currentTax);
+      console.log(currentAmount);
+    }
+    return currentYear;
+}
+
+calculateYears(1000, 0.05, 0.18, 1100)
